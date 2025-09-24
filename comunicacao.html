@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Comunicação — Guia Prático</title>
+  <meta name="description" content="Site simples e responsivo com conceitos, tipos e dicas para melhorar a comunicação pessoal e profissional." />
+
+  <!-- Styles: layout clean, tons de azul e branco -->
+  <style>
+    :root{
+      --bg:#ffffff;
+      --primary:#1e6fb8; /* azul principal */
+      --muted:#6b7a90;
+      --card:#f6fbff;
+      --radius:14px;
+      --maxw:1000px;
+      --gap:20px;
+      --accent:#0b77d1;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color-scheme: light;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:var(--bg);color:#0b1720}
+    a{color:var(--primary);text-decoration:none}
+
+    /* Top nav */
+    header{position:sticky;top:0;backdrop-filter:saturate(120%) blur(6px);background:linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.6));border-bottom:1px solid rgba(10,20,30,0.06);z-index:40}
+    .nav{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 16px;gap:12px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700}
+    .brand .logo{width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--accent));display:grid;place-items:center;color:white;font-weight:700}
+
+    nav ul{display:flex;gap:14px;list-style:none;margin:0;padding:0}
+    nav li{font-size:15px}
+    .cta{padding:8px 12px;border-radius:10px;background:var(--primary);color:#fff;font-weight:600}
+
+    /* Hamburger for mobile */
+    .hamburger{display:none;border:0;background:none;padding:8px}
+
+    /* Main container */
+    main{max-width:var(--maxw);margin:28px auto;padding:0 16px}
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:24px;align-items:center}
+    .hero-card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(11,22,32,0.06)}
+    h1{margin:0 0 8px;font-size:28px;color:var(--primary)}
+    p.lead{margin:0;color:var(--muted);line-height:1.5}
+
+    /* Sections */
+    section{margin-top:28px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    .card{background:#fff;padding:18px;border-radius:12px;border:1px solid rgba(11,22,32,0.04)}
+    h2{margin:0 0 10px;font-size:20px;color:#0b2c42}
+    ul.clean{padding-left:18px;margin:0;color:var(--muted)}
+
+    /* Tips list */
+    .tips{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .tip{padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(11,111,184,0.06), rgba(11,111,184,0.02));border:1px solid rgba(11,111,184,0.06)}
+
+    /* Contact */
+    form{display:grid;gap:10px}
+    input,textarea{padding:10px;border-radius:8px;border:1px solid rgba(11,22,32,0.08);font-family:inherit}
+    button[type=submit]{padding:10px 14px;border-radius:10px;border:0;background:var(--primary);color:white;font-weight:600}
+
+    footer{margin:36px 0 60px;text-align:center;color:var(--muted);font-size:14px}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      .tips{grid-template-columns:1fr}
+      nav ul{display:none}
+      .hamburger{display:block}
+      .mobile-menu{display:none;background:white;padding:12px;border-top:1px solid rgba(10,20,30,0.04)}
+      .mobile-menu.open{display:block}
+    }
+
+    @media (max-width:420px){
+      h1{font-size:22px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div class="logo">C</div>
+        <div>
+          <div style="font-size:15px">Comunicação</div>
+          <div style="font-size:12px;color:var(--muted);">Guia prático</div>
+        </div>
+      </div>
+
+      <nav aria-label="Menu principal">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#tipos">Tipos de Comunicação</a></li>
+          <li><a href="#dicas">Dicas</a></li>
+          <li><a href="#contato" class="cta">Contato</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" aria-label="Abrir menu" id="hamburger">☰</button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#inicio">Início</a> • <a href="#sobre">Sobre</a> • <a href="#tipos">Tipos</a> • <a href="#dicas">Dicas</a> • <a href="#contato">Contato</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div>
+        <div class="hero-card">
+          <h1>Comunicação clara. Conexões reais.</h1>
+          <p class="lead">Aprenda os conceitos essenciais, entenda os diferentes tipos de comunicação e veja dicas práticas para melhorar a maneira como você fala, escreve e se conecta com outras pessoas — no trabalho e na vida pessoal.</p>
+          <p style="margin-top:12px"><a href="#dicas" class="cta">Ver dicas</a></p>
+        </div>
+
+        <section id="sobre" style="margin-top:18px">
+          <div class="card">
+            <h2>O que é comunicação?</h2>
+            <p style="margin:0;color:var(--muted);line-height:1.5">Comunicação é o processo de trocar informações, ideias e sentimentos entre pessoas. Envolve emissor, receptor, mensagem, canal e contexto — e pode ser afetada por ruídos que dificultam a compreensão. A boa comunicação prioriza clareza, escuta ativa e adequação ao público.</p>
+          </div>
+        </section>
+
+        <section id="tipos" style="margin-top:18px">
+          <div class="card">
+            <h2>Tipos de comunicação</h2>
+            <ul class="clean">
+              <li><strong>Verbal:</strong> fala, entonação e escolha de palavras.</li>
+              <li><strong>Não verbal:</strong> linguagem corporal, expressões faciais e postura.</li>
+              <li><strong>Escrita:</strong> mensagens, e-mails, relatórios e textos bem estruturados.</li>
+              <li><strong>Digital:</strong> redes sociais, chats e reuniões online — requer clareza e etiqueta digital.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <aside>
+        <div class="hero-card">
+          <h2>Resumo rápido</h2>
+          <p style="margin:0;color:var(--muted)">Comunicação eficaz = clareza + escuta ativa + feedback. Pratique pequenas mudanças que geram grandes resultados.</p>
+          <hr style="margin:14px 0;border:none;border-top:1px solid rgba(11,22,32,0.05)"/>
+          <h3 style="margin:0 0 8px">Benefícios</h3>
+          <ul style="margin:0;color:var(--muted);padding-left:18px">
+            <li>Melhor trabalho em equipe</li>
+            <li>Menos mal-entendidos</li>
+            <li>Relacionamentos mais fortes</li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+
+    <section id="dicas">
+      <h2>Como melhorar sua comunicação</h2>
+      <div class="tips">
+        <div class="tip">
+          <strong>1. Escuta ativa</strong>
+          <p style="margin:8px 0 0;color:var(--muted)">Foque no que a outra pessoa diz, resuma com suas palavras e pergunte para confirmar.</p>
+        </div>
+        <div class="tip">
+          <strong>2. Clareza e objetividade</strong>
+          <p style="margin:8px 0 0;color:var(--muted)">Vá direto ao ponto: use frases curtas e exemplos quando necessário.</p>
+        </div>
+        <div class="tip">
+          <strong>3. Linguagem corporal</strong>
+          <p style="margin:8px 0 0;color:var(--muted)">Mantenha contato visual adequado, postura aberta e expressões congruentes com sua mensagem.</p>
+        </div>
+        <div class="tip">
+          <strong>4. Comunicação escrita</strong>
+          <p style="margin:8px 0 0;color:var(--muted)">Revise e organize: títulos, parágrafos curtos e bullets ajudam a leitura.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:14px" class="card">
+        <h2>Dicas práticas para ambientes profissionais</h2>
+        <ul class="clean">
+          <li>Prepare pautas antes de reuniões.</li>
+          <li>Dê e peça feedback construtivo.</li>
+          <li>Use vias formais para decisões (e-mail com resumo de ações).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contato" style="margin-top:18px">
+      <h2>Contato</h2>
+      <div class="card">
+        <p style="margin:0 0 12px;color:var(--muted)">Tem perguntas ou quer workshops sobre comunicação? Envie uma mensagem (formulário abaixo — sem backend de envio).</p>
+        <form onsubmit="event.preventDefault(); alert('Formulário simulado — implemente back-end para envio.');">
+          <input type="text" placeholder="Seu nome" required />
+          <input type="email" placeholder="Seu e-mail" required />
+          <textarea rows="4" placeholder="Mensagem" required></textarea>
+          <div style="display:flex;gap:8px;justify-content:flex-end">
+            <button type="submit">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div style="max-width:var(--maxw);margin:0 auto;padding:0 16px">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>© "Comunicação" — Todos os direitos reservados.</div>
+        <div style="color:var(--muted)">Siga: <a href="#">LinkedIn</a> • <a href="#">Instagram</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Small javascript: toggle mobile menu + smooth scroll -->
+  <script>
+    const ham = document.getElementById('hamburger');
+    const menu = document.getElementById('mobileMenu');
+    ham.addEventListener('click', ()=> menu.classList.toggle('open'));
+
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const target = document.querySelector(a.getAttribute('href'));
+        if(target){
+          e.preventDefault();
+          target.scrollIntoView({behavior:'smooth',block:'start'});
+          menu.classList.remove('open');
+        }
+      })
+    })
+  </script>
+</body>
+</html>

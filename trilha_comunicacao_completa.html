@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trilha de Aprendizagem em Comunicação</title>
+  <style>
+    :root {
+      --primary: #1e6fb8;
+      --accent: #0b77d1;
+      --bg: #f6fbff;
+      --text: #0b1720;
+      --card: #ffffff;
+      --radius: 12px;
+      --gap: 16px;
+      font-family: Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); line-height: 1.5; }
+
+    header { background: var(--primary); color: white; padding: 16px; position: sticky; top: 0; z-index: 10; }
+    header h1 { margin: 0; font-size: 24px; }
+    nav ul { display: flex; gap: var(--gap); margin-top: 8px; list-style: none; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+
+    main { max-width: 1000px; margin: 24px auto; padding: 0 16px; }
+    section { margin-bottom: 32px; }
+    h2 { color: var(--primary); margin-bottom: 12px; }
+
+    .grid { display: grid; gap: var(--gap); grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .card { background: var(--card); padding: 16px; border-radius: var(--radius); box-shadow: 0 4px 10px rgba(0,0,0,0.06); }
+    .card h3 { margin-bottom: 8px; }
+    .card p { color: #333; }
+    .card a { color: var(--accent); text-decoration: underline; }
+
+    footer { text-align: center; margin: 40px 0; color: #555; font-size: 14px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Trilha de Aprendizagem em Comunicação</h1>
+  <nav>
+    <ul>
+      <li><a href="#oque">O que é Comunicação</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#criterios">Critérios</a></li>
+      <li><a href="#dinamicas">Dinâmicas</a></li>
+      <li><a href="#apresentacoes">Apresentações</a></li>
+      <li><a href="#recursos">Recursos</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="oque">
+    <h2>O que é Comunicação</h2>
+    <div class="card">
+      <p>Comunicação é o processo de trocar informações, ideias e sentimentos entre pessoas.</p>
+      <p>Envolve emissor, receptor, mensagem, canal e contexto.</p>
+      <p>A boa comunicação prioriza clareza, escuta ativa e adequação ao público.</p>
+      <p>Exemplos de comunicação: verbal, não verbal, escrita, digital.</p>
+    </div>
+  </section>
+
+  <section id="habilidades">
+    <h2>Habilidades que serão desenvolvidas</h2>
+    <div class="grid">
+      <div class="card">Escuta ativa</div>
+      <div class="card">Clareza e objetividade</div>
+      <div class="card">Adequação ao público</div>
+      <div class="card">Linguagem corporal</div>
+      <div class="card">Prática constante</div>
+    </div>
+  </section>
+
+  <section id="criterios">
+    <h2>Critérios de avaliação</h2>
+    <div class="grid">
+      <div class="card">Clareza e objetividade ao falar</div>
+      <div class="card">Estrutura lógica das ideias</div>
+      <div class="card">Entonação e ritmo</div>
+      <div class="card">Postura corporal e gestos</div>
+      <div class="card">Contato visual e confiança</div>
+    </div>
+  </section>
+
+  <section id="dinamicas">
+    <h2>Dinâmicas</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Telefone sem fio</h3>
+        <p><strong>Como funciona:</strong> Um participante recebe uma mensagem curta e sussurra para o próximo, até chegar ao último.</p>
+        <p><strong>Objetivo:</strong> Mostrar como a mensagem pode ser distorcida e a importância da clareza.</p>
+      </div>
+      <div class="card">
+        <h3>Fala de novo</h3>
+        <p><strong>Como funciona:</strong> Um participante conta uma experiência ou ideia por 2-3 minutos. O outro deve resumir com suas próprias palavras.</p>
+        <p><strong>Objetivo:</strong> Treinar escuta, compreensão e feedback.</p>
+      </div>
+      <div class="card">
+        <h3>Role-play de conflitos</h3>
+        <p><strong>Como funciona:</strong> Simular situações difíceis (feedback negativo, conflito de equipe, negociação) e praticar respostas assertivas.</p>
+        <p><strong>Objetivo:</strong> Desenvolver comunicação assertiva, empatia e resolução de conflitos.</p>
+      </div>
+      <div class="card">
+        <h3>Storytelling em grupo</h3>
+        <p><strong>Como funciona:</strong> Um participante começa uma história e cada integrante adiciona um trecho, mantendo coerência e criatividade.</p>
+        <p><strong>Objetivo:</strong> Treinar narrativa, criatividade e coesão na comunicação.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="apresentacoes">
+    <h2>Apresentações</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Quem sou eu</h3>
+        <p>Cada participante terá que se apresentar.</p>
+      </div>
+      <div class="card">
+        <h3>Miniapresentação livre</h3>
+        <p>Cada participante escolhe um tema que gosta. <strong>Objetivo:</strong> praticar clareza, postura e confiança.</p>
+      </div>
+      <div class="card">
+        <h3>Apresentação estruturada</h3>
+        <p>Tema dentro de áreas administrativas com introdução, desenvolvimento e conclusão. <strong>Objetivo:</strong> organizar ideias e transmitir mensagens de forma lógica.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="recursos">
+    <h2>Recursos Complementares</h2>
+    <div class="grid">
+      <div class="card">
+        <a href="https://www.ev.org.br/trilhas-de-conhecimento/aprimoramento-profissional" target="_blank">Trilhas de Aprimoramento Profissional – EV</a>
+      </div>
+      <div class="card">
+        <a href="https://educacao-executiva.fgv.br/cursos/online/curta-media-duracao-online/storytelling-e-tecnicas-de-apresentacao-conceitos-gerais-de-comunicacao" target="_blank">Storytelling e Técnicas de Apresentação – FGV Educação Executiva</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Trilha de Aprendizagem em Comunicação. Todos os direitos reservados.
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversário, Marília!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Sans MS', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #8B0000, #FF6347, #FFB6C1);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        header h1 {
+            color: #fff;
+            font-size: 3rem;
+            text-shadow: 2px 2px #B22222;
+        }
+
+        /* Abas principais */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            background-color: #B22222;
+            color: #fff;
+            padding: 12px 25px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 10px 10px 0 0;
+            transition: 0.3s;
+        }
+
+        .tab:hover {
+            background-color: #8B0000;
+        }
+
+        .tab.active {
+            background-color: #fff;
+            color: #B22222;
+            font-weight: bold;
+        }
+
+        /* Conteúdo das abas principais */
+        .tab-content {
+            display: none;
+            background-color: rgba(255,255,255,0.95);
+            margin: 0 20px 20px 20px;
+            padding: 20px;
+            border-radius: 0 0 10px 10px;
+            text-align: center;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Mini abas dos poemas */
+        .mini-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .mini-tab {
+            background-color: #CD5C5C;
+            color: #fff;
+            padding: 8px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .mini-tab:hover {
+            background-color: #B22222;
+        }
+
+        .mini-tab.active {
+            background-color: #fff;
+            color: #B22222;
+            font-weight: bold;
+        }
+
+        .mini-tab-content {
+            display: none;
+            font-size: 1.1rem;
+            color: #8B0000;
+            margin-top: 15px;
+            white-space: pre-line;
+        }
+
+        .mini-tab-content.active {
+            display: block;
+        }
+
+        /* Links */
+        a {
+            text-decoration: none;
+        }
+
+        /* Confetes */
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            opacity: 0.7;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎉 Feliz Aniversário, Marília! 🎉</h1>
+    </header>
+
+    <!-- Abas principais -->
+    <div class="tabs">
+        <div class="tab active" data-tab="cartinha">Cartinha</div>
+        <div class="tab" data-tab="poems">Poemas</div>
+        <div class="tab" data-tab="playlist">Playlist</div>
+    </div>
+
+    <!-- Cartinha -->
+    <div id="cartinha" class="tab-content active">
+        <h2>Cartinha Especial </h2>
+        <p>
+            Clique no link abaixo para ler a cartinha de aniversário:
+            <br><br>
+            <a href="https://memoryiit.com/fdeaf825-Feliz-aniversario" target="_blank" style="color:#B22222; font-weight:bold; text-decoration: underline;">
+                 Ler Cartinha 
+            </a>
+        </p>
+    </div>
+
+    <!-- Poemas -->
+    <div id="poems" class="tab-content">
+        <h2>Poemas </h2>
+
+        <!-- Mini Abas -->
+        <div class="mini-tabs">
+            <div class="mini-tab active" data-mini="poema1">Poema 1</div>
+            <div class="mini-tab" data-mini="poema2">Poema 2</div>
+            <div class="mini-tab" data-mini="poema3">Poema 3</div>
+            <div class="mini-tab" data-mini="poema4">Poema 4</div>
+            <div class="mini-tab" data-mini="poema5">Poema 5</div>
+        </div>
+
+        <!-- Conteúdo das mini-abas -->
+        <div id="poema1" class="mini-tab-content active">
+O tempo passa discreto, sereno,  
+como o vento que atravessa a janela  
+sem pedir licença.  
+Leva consigo risadas, olhares,  
+promessas ditas entre conversas,  
+e deixa só o eco do que fomos.  
+
+As horas não têm rosto,  
+mas carregam lembranças em seus minutos.  
+O relógio gira sem parar  
+para quem tenta prender o instante.  
+
+Há dias que ainda vivem para o próximo nascer do sol,  
+mesmo que o calendário os tenha apagado.  
+E há sonhos que ficaram pelo caminho,  
+esperando um amanhã que nunca veio.  
+
+O tempo não volta,  
+mas talvez ensine, em sua partida,  
+que nada é perdido,  
+apenas transformado em lembrança.
+        </div>
+
+        <div id="poema2" class="mini-tab-content">
+Guardamos nossos sonhos  
+em gavetas que já nem abrem direito.  
+Promessas de futuro,  
+planos escritos entre turnos de trabalho  
+e contas que precisam ser pagas.  
+
+Nos disseram que o tempo certo viria,  
+que bastava esforço,  
+mas ninguém contou  
+que o mundo corre na direção contrária.  
+
+Mesmo assim, a gente insiste,  
+pinta o quadro de novo e de novo com esperança,  
+faz da rotina um palco  
+e da resistência, poesia.  
+
+Porque sonhar,  
+mesmo cansado,  
+ainda é o ato mais bonito  
+de quem se recusa a desistir de si.
+        </div>
+
+        <div id="poema3" class="mini-tab-content">
+Lembro das tardes sem pressa,  
+dos sorrisos que se espalhavam no ar.  
+Cada piada, cada idiotice que fazia,  
+ficou guardada, pronta pra voltar.  
+
+Mesmo quando a vida nos afastou,  
+o eco da alegria insiste em ficar.  
+É o riso que jamais se apagou,  
+é a amizade que aprende a durar.  
+
+Não importa quanto o tempo avance,  
+ou quantos caminhos possamos cruzar,  
+as risadas sempre acham a chance  
+de nossos corações se reencontrar.
+        </div>
+
+        <div id="poema4" class="mini-tab-content">
+Não é preciso dizer nada,  
+nem explicar o que dói ou alegra.  
+Um abraço basta,  
+e tudo se entende,  
+como se o coração falasse sozinho.  
+
+Entre braços que acolhem,  
+o mundo se aquieta,  
+as palavras se tornam supérfluas,  
+e a amizade se prova  
+na simplicidade do toque.  
+
+É silêncio que conforta,  
+é presença que cura,  
+é o laço invisível  
+que só os verdadeiros amigos conhecem.
+        </div>
+
+        <div id="poema5" class="mini-tab-content">
+Sentir o cheiro de chuva na terra,  
+ouvir uma música que faz sorrir,  
+olhar as nuvens passando devagar,  
+um abraço inesperado.  
+
+São momentos pequenos,  
+mas que enchem a alma  
+e fazem a gente lembrar:  
+feliz no simples.
+        </div>
+    </div>
+
+    <!-- Playlist -->
+    <div id="playlist" class="tab-content">
+        <h2>Playlist Especial 🎶</h2>
+        <p>
+            Clique para ouvir no Spotify:
+            <br><br>
+            <a href="https://open.spotify.com/playlist/4O6Ef5A7BAJknX0D7XWjwZ" target="_blank" style="color:#B22222; font-weight:bold; text-decoration: underline;">
+                🎧 Ouvir Playlist
+            </a>
+        </p>
+    </div>
+
+    <script>
+        // Abas principais
+        const tabs = document.querySelectorAll('.tab');
+        const contents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+
+        // Mini abas (poemas)
+        const miniTabs = document.querySelectorAll('.mini-tab');
+        const miniContents = document.querySelectorAll('.mini-tab-content');
+
+        miniTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                miniTabs.forEach(t => t.classList.remove('active'));
+                miniContents.forEach(c => c.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.mini).classList.add('active');
+            });
+        });
+
+        // Confetes animados
+        function createConfetti() {
+            const colors = ['#B22222', '#FF6347', '#CD5C5C', '#8B0000', '#FFA07A', '#FFC0CB'];
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.left = Math.random() * window.innerWidth + 'px';
+                confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                confetti.style.width = confetti.style.height = Math.random() * 10 + 5 + 'px';
+                document.body.appendChild(confetti);
+                setTimeout(() => confetti.remove(), 5000);
+            }
+        }
+        setInterval(createConfetti, 1000);
+    </script>
+</body>
+</html>
